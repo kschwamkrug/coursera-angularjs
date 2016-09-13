@@ -25,9 +25,13 @@
                               {
                                 var num_items = $scope.countitems();
                                 if( num_items == 0 )
+                                {
                                   $scope.statusMsg = "Please enter data first";
+                                  $scope.status = { "color" : "red" };
+                                }
                                 else
                                 {
+                                    $scope.status = { "color" : "green" };
                                     if( num_items < 4 )
                                       $scope.statusMsg = "Enjoy";
                                     else
