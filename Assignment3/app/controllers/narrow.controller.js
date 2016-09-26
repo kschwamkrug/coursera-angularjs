@@ -10,6 +10,7 @@
     {
         var narrow = this;
         var service_promise;
+        narrow.found = [];
 
         narrow.refine = function()
         {
@@ -31,7 +32,9 @@
           }
         }
 
-
+        narrow.removeItem = function( itemIndex )
+        {
+            narrow.found.splice( itemIndex, 1 );
+        };
     }
-
 })();

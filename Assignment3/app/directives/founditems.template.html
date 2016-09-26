@@ -1,0 +1,19 @@
+<div class="row" ng-repeat="item in dirctl.found">
+  <div class="col-md-1">
+      {{ item.short_name }}
+  </div>
+  <div class="col-md-3">
+      {{ item.name }}
+  </div>
+  <div class="col-md-7">
+      {{ item.description }}
+  </div>
+  <div class="col-md-1">
+    <div class="form-group narrow-button">
+        <button class="btn btn-primary"
+                ng-click="dirctl.onRemove({index: $index});">
+                      Don't want this one!
+        </button>
+    </div>
+  </div>
+</div>
