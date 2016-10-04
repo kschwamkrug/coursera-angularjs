@@ -1,0 +1,12 @@
+<h2>Menu Categories</h2>
+<div class="row"
+     ng-repeat="category in $ctrl.categories" >
+  <div class="col-md-2">
+    <a href="#", ui-sref="categories.items( { category: category.short_name } )">
+      {{ category.short_name }}
+    </a>
+  </div>
+  <div class="col-md-10">
+    {{ category.name }}
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Assignment 4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Libraries -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <!-- DataService Module-->
+    <script src="app/dataservice/data.module.js"></script>
+    <script src="app/dataservice/menudata.service.js"></script>
+
+    <!-- Main(MenuApp) Module -->
+    <script src="app/menuapp/menuapp.module.js"></script>
+
+    <!-- MenuApp controllers -->
+    <script src="app/menuapp/menu.controller.js"></script>
+    <script src="app/menuapp/items.controller.js"></script>
+
+    <!-- MenuApp components -->
+    <script src="app/menuapp/categories.component.js"></script>
+    <script src="app/menuapp/items.component.js"></script>
+
+    <!-- MenuApp routes -->
+    <script src="app/routes/routes.js"></script>
+  </head>
+<body ng-app="MenuApp">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Assignment 4</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a ui-sref="home">Home</a></li>
+          <li><a ui-sref="categories">Categories</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav><!-- End of navbar -->
+  <div class="container" class="main-content">
+    <ui-view></ui-view>
+    </div>
+
+  </div>
+</body>
+</html>
