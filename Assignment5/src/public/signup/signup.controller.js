@@ -24,6 +24,7 @@ function SignupController(ProfileService) {
       signupCtrl.msg = "Already registered; you info not added again";
     else
     {
+      signupCtrl.user.favorite.short_name = signupCtrl.user.favorite.short_name.toUpperCase();
       ProfileService.addProfileInfo( signupCtrl.user, signupCtrl );
     }
   }
