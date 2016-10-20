@@ -1,0 +1,105 @@
+<div class="container">
+  <h2>Your Profile Information</h2>
+  <p ng-if="!ProfileCtrl.registered()">
+    Not Signed Up Yet.
+    <br />
+    <a ui-sref="public.signup">Sign Up Now!</a>
+  </p>
+  <div class="text-left" ng-if="ProfileCtrl.registered()">
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-3">
+        First Name:
+      </div>
+      <div class="col-md-3">
+        {{ ProfileCtrl.getProfile().firstname }}
+      </div>
+      <div class="col-md-3">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-3">
+        Last Name:
+      </div>
+      <div class="col-md-3">
+        {{ ProfileCtrl.getProfile().lastname }}
+      </div>
+      <div class="col-md-3">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-3">
+        Email Address:
+      </div>
+      <div class="col-md-3">
+        {{ ProfileCtrl.getProfile().email }}
+      </div>
+      <div class="col-md-3">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-3">
+          Phone Number:
+      </div>
+      <div class="col-md-3">
+        {{ ProfileCtrl.getProfile().phone }}
+      </div>
+      <div class="col-md-3">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-3">
+        Favorite Dish (Short Name):
+      </div>
+      <div class="col-md-3">
+        {{ ProfileCtrl.getProfile().favorite.short_name }}
+      </div>
+      <div class="col-md-3">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-3">
+        Favorite Dish (Name):
+      </div>
+      <div class="col-md-3">
+        {{ ProfileCtrl.getProfile().favorite.name }}
+      </div>
+      <div class="col-md-3">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-3">
+        Favorite Dish (Description):
+      </div>
+      <div class="col-md-3">
+        {{ ProfileCtrl.getProfile().favorite.description }}
+      </div>
+      <div class="col-md-3">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-4">
+        <img class="img-responsive" width="250" Height="150"
+             ng-src="https://kschwamkrug-angularjs.herokuapp.com/images/{{ProfileCtrl.getProfile().favorite.short_name}}.jpg">
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+  </div>
+
+</div>
